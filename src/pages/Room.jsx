@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react'
 import client, { databases, DATABASE_ID, COLLECTION_ID_MESSAGES } from '../appwriteConfig'
 import { ID, Query, Permission, Role} from 'appwrite';
@@ -120,7 +121,8 @@ const Room = () => {
                             <small className="message-timestamp"> {new Date(message.$createdAt).toLocaleString()}</small>
                         </p>
 
-                        {message.$permissions.includes(`delete(\"user:${user.$id}\")`) && (
+                        
+                        {message.$permissions.includes(`delete("user:${user.$id}")`) && (
                             <Trash2 className="delete--btn" onClick={() => {deleteMessage(message.$id)}}/>
                             
                         )}
