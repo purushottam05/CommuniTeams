@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { useAuth } from '../utils/AuthContext'
 import { Link } from 'react-router-dom'
